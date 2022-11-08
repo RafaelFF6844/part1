@@ -1,25 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import Descripcion from './Descripcion.js'
 
-function App() {
+const App = () => {
+  const mensaje = "Hola Mundo"
+  const a = 10
+  const b = 5
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {mensaje + ' v2.0'}
+      <br></br>
+      {'El resultado de la suma es '+ (a + b)}
+      <br></br>
+      <Mensaje />
+      <Descripcion version='14.9' />
     </div>
   );
+}
+
+/* Nombre de componentes, funciones, siempre en mayusculas */
+const Mensaje = () => {
+  return <h1>Hola Novato</h1>
 }
 
 export default App;
